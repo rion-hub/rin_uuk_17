@@ -1,0 +1,248 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #007BFF;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form input, form select, form textarea, form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #007BFF;
+    color: white;
+}
+
+#struk {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    background: #415a80;
+    min-height: 100px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Waves Animation */
+footer .wave {
+    position: absolute;
+    top: -50px; /* Menurunkan posisi gelombang */
+    left: 0;
+    width: 100%;
+    height: 70px; /* Gelombang lebih kecil */
+    background: url('aset/wave.png') repeat-x;
+    background-size: 1000px 70px;
+    transform: rotate(180deg);
+}
+
+footer .wave#wave1 {
+    z-index: 1;
+    opacity: 1;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 2;
+    opacity: 0.5;
+    animation: animateWaveReverse 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 3;
+    opacity: 0.3;
+    animation: animateWave 6s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 4;
+    opacity: 0.7;
+    animation: animateWaveReverse 6s linear infinite;
+}
+
+/* Keyframes for Wave Animations */
+@keyframes animateWave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animateWaveReverse {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+/* Social Media Links */
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+footer .social li {
+    list-style: none;
+}
+
+footer .social li a {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social li a:hover {
+    transform: translateY(-5px) rotate(10deg);
+    color: #28ff99;
+}
+
+/* Footer Menu */
+footer .menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+footer .menu li {
+    list-style: none;
+}
+
+footer .menu li a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+footer .menu li a:hover {
+    color: #28ff99;
+    font-weight: bold;
+}
+
+/* Footer Text */
+footer p {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer .social li a {
+        font-size: 1.5rem;
+    }
+
+    footer .menu li a {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer .social li a {
+        font-size: 1.2rem;
+    }
+
+    footer .menu li a {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.6rem;
+    }
+}

@@ -1,0 +1,359 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    background: url("aset/bghome.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+  /* Nav Bar */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar ul li {
+    margin: 0 10px;
+}
+
+.nav-bar ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+  /* Burger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+  /* Responsif */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: height 0.3s ease-in-out;
+    }
+
+    .nav-bar.show {
+        height: 300px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-bar ul li {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .nav-bar ul li a {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        text-decoration: none;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .nav-bar ul li a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+}
+
+
+/* Style untuk Card */
+
+section {
+    padding-top: 250px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #03045e;
+    text-shadow: 2px 2px 4px aqua;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 20px;
+    }
+}
+
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+    transform: scale(1.2);
+}
+
+.card:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px aquamarine; /* Perbesar bayangan pada hover */
+    transform: translateY(-5px); /* Efek melayang */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .card {
+        max-width: 90%; /* Kurangi ukuran pada layar kecil */
+        padding: 15px;
+    }
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+
+/* Tombol gaya */
+.card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Tombol transparan */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #28ff99;
+    color: black;
+}
+
+/* Footer */
+footer {
+    position: relative; /* Gunakan relative untuk fleksibilitas layout */
+    width: 100%;
+    background: #415a80;
+    min-height: 150px; /* Tinggi minimum diperbesar untuk tampilan lebih baik */
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto; /* Memastikan footer tetap di bawah */
+    overflow: hidden;
+    color: white;
+}
+
+/* Fix Position Footer for Short Pages */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pastikan halaman setinggi viewport */
+}
+
+main {
+    flex: 1; /* Isi utama akan mengambil sisa ruang */
+}
+
+/* Social Media Links */
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+footer .social li {
+    list-style: none;
+}
+
+footer .social li a {
+    font-size: 1.8rem;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social li a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: #28ff99;
+}
+
+/* Footer Menu */
+footer .menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+footer .menu li {
+    list-style: none;
+}
+
+footer .menu li a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+    text-align: center;
+}
+
+footer .menu li a:hover {
+    color: #28ff99;
+    font-weight: bold;
+}
+
+/* Footer Text */
+footer p {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer .social li a {
+        font-size: 1.5rem;
+    }
+
+    footer .menu li a {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer .social li a {
+        font-size: 1.2rem;
+    }
+
+    footer .menu li a {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.6rem;
+    }
+}

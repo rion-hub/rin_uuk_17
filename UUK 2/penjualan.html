@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian</title>
+    <link rel="stylesheet" href="penjualan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="logo">REY</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html#home" class="home">Home</a></li>
+                <li><a href="index.html#about" class="about">About</a></li>
+                <li><a href="index.html#services" class="services">Services</a></li>
+                <li><a href="form.html" class="category">Login</a></li>
+                <li><a href="contac.html" class="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header> <br> <br> <br> <br> <br>
+
+    <section class="box">
+        <h1>Pembelian</h1>
+        <form id="purchaseForm">
+            <label for="selectProduct">Pilih Produk:</label>
+            <select id="selectProduct" required></select>
+            <label for="quantity">Jumlah:</label>
+            <input id="quantity" type="number" min="1" required>
+            <label for="bankAccount">Pilih Bank:</label>
+            <select id="bankAccount" required>
+                <option value="Bank A">BRI</option>
+                <option value="Bank B">BCA</option>
+                <option value="Bank C">BNI</option>
+                <option value="Bank D">Mandiri</option>
+            </select>
+            <button type="submit">Buy</button>
+        </form>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="scrud.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

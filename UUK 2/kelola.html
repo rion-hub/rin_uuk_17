@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Produk</title>
+    <link rel="stylesheet" href="penjualan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="logo">REY</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html#home" class="home">Home</a></li>
+                <li><a href="index.html#about" class="about">About</a></li>
+                <li><a href="index.html#education" class="services">Services</a></li>
+                <li><a href="form.html" class="category">Login</a></li>
+                <li><a href="contac.html" class="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header> <br> <br> <br> <br>
+
+    <section class="box">
+        <h1>Kelola Produk</h1>
+        <form id="productForm">
+            <input id="productName" type="text" placeholder="Nama Produk" required>
+            <input id="productType" type="text" placeholder="Jenis Produk" required>
+            <input id="productPrice" type="number" placeholder="Harga Produk" required>
+            <button type="submit">Tambahkan Produk</button>
+        </form>
+    </section>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Jenis</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="scrud.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
